@@ -317,6 +317,7 @@ var $flowers = $('#flower-items');
 
 $flowers.find('a').on('click', function(e){
     var pathFragment = "";
+	e.preventDefault();
 	switch($(this).attr("href")) {
 	 
 	 case 'calla.html'          : pathFragment = "fragments/lilies.html";
@@ -326,11 +327,9 @@ $flowers.find('a').on('click', function(e){
 	 case 'iris.html'        	: pathFragment = "fragments/irises.html";   
 	 break;   
 	 case 'alstromeria.html'    : pathFragment = "fragments/peruvian.html";
-	 console.log(pathFragment); 
+
 	}
 
-	e.preventDefault();
-	console.log(e.target);
 	$('#flower-description').load(pathFragment);
 	
 });
