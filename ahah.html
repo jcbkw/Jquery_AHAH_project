@@ -315,9 +315,25 @@ $(document).ready(function(e) {
 
 var $flowers = $('#flower-items');
 
-$('#flower-items').find('a').on('click', function(e){
-	e.preventDefault();
+$flowers.find('a').on('click', function(e){
+    var pathFragment = "";
+	debugger;
+	console.log(this);
+	switch(e.currentTarget.pathname) {
+	 
+	 case '/calla.html'          : pathFragment = "fragments/lilies.html";
+	 break;   
+	 case '/sunflowers.html'     : pathFragment = "fragments/sunflower.html";   
+	 break;   
+	 case '/iris.html'        	: pathFragment = "fragments/irises.html";   
+	 break;   
+	 case '/alstromeria.html'    : pathFragment = "fragments/peruvian.html";
+	 console.log(pathFragment); 
+	}
 
+	e.preventDefault();
+	console.log(e.target);
+	$('#flower-description').load(pathFragment);
 	
 });
 
