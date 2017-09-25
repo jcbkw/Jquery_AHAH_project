@@ -317,17 +317,15 @@ var $flowers = $('#flower-items');
 
 $flowers.find('a').on('click', function(e){
     var pathFragment = "";
-	debugger;
-	console.log(this);
-	switch(e.currentTarget.pathname) {
+	switch($(this).attr("href")) {
 	 
-	 case '/calla.html'          : pathFragment = "fragments/lilies.html";
+	 case 'calla.html'          : pathFragment = "fragments/lilies.html";
 	 break;   
-	 case '/sunflowers.html'     : pathFragment = "fragments/sunflower.html";   
+	 case 'sunflowers.html'     : pathFragment = "fragments/sunflower.html";   
 	 break;   
-	 case '/iris.html'        	: pathFragment = "fragments/irises.html";   
+	 case 'iris.html'        	: pathFragment = "fragments/irises.html";   
 	 break;   
-	 case '/alstromeria.html'    : pathFragment = "fragments/peruvian.html";
+	 case 'alstromeria.html'    : pathFragment = "fragments/peruvian.html";
 	 console.log(pathFragment); 
 	}
 
